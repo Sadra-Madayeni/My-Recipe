@@ -1,17 +1,18 @@
 services:
-  backend:
-    build: ./backend
-    container_name: culinary_backend
-    ports:
-      - "8000:8000"
-    volumes:
-      - backend_media:/app/media
-    command: >
-      sh -c "python manage.py migrate &&
-             python manage.py collectstatic --noinput &&
-             gunicorn backend.wsgi:application --bind 0.0.0.0:8000"
+ backend:
+  build: ./backend
+  container_name: culinary_backend
+  env_file:
+    - ./backend/.env
+  environment:
+    - PYTHONUNBUFFERED=1
+  ports:
+    - "8000:8000"
+  volumes:
+    - backend_media:/app/media
+  command: gunicorn backend.wsgi:application --bind 0.0.0.0:8000 --access-logfile - --error-logfile - --log-level info
 
-  frontend:
+ frontend:
     build: ./frontend
     container_name: culinary_frontend
     ports:
