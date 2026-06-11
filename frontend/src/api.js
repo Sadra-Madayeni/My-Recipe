@@ -25,8 +25,8 @@
 import axios from 'axios'
 
 const api = axios.create({
-  
-  baseURL: 'https://culinary-backend.b4a.run/api/', 
+
+  baseURL: 'https://myrecipe-3rie1hnd.b4a.run/api/', 
 })
  
 api.interceptors.request.use(
