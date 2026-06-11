@@ -11,6 +11,17 @@ The entire application is fully dockerized, utilizing a multi-stage Nginx build 
 
 ---
 
+ **Live Site Available!**
+
+You can explore the fully deployed application right now at: **[my-recipe-orpin.vercel.app](https://my-recipe-orpin.vercel.app/)**
+
+This full-stack project leverages a modern, decoupled cloud architecture:
+* **Frontend:** Deployed on **Vercel** using a custom Dockerfile.
+* **Backend:** Containerized with **Docker** and hosted on **Back4App**.
+* **Database:** Powered by serverless PostgreSQL via **Neon Tech**.
+
+---
+
 ## Key Features
 
 * **Secure Authentication:** JSON Web Token (JWT) based login and registration system.
@@ -53,12 +64,12 @@ This project was built with production scalability, data integrity, and rapid de
 
 ---
 
-## ☁️ Tech Stack & Deployment Strategy
+## Tech Stack & Deployment Strategy
 
 This project is architected for a decoupled, serverless-friendly cloud deployment. *(Note: The live cloud deployment is currently in progress. Live URLs will be updated here shortly).*
 
 * **Frontend:** React 18, Vite, Tailwind CSS -> *Configured for global CDN distribution via **Vercel**.*
-* **Backend:** Python 3.11, Django 5.x, DRF -> *Dockerized and prepped for deployment on **Render** web services.*
+* **Backend:** Python 3.11, Django 5.x, DRF -> *Dockerized and prepped for deployment on **Back4App** web services.*
 * **Database:** PostgreSQL -> *Configured to utilize **Neon.tech** (Serverless DB).* (Used sqlite for local production)
 * **Media Storage:** Cloudinary -> *User uploads are routed securely via `django-cloudinary-storage` to prevent data loss on ephemeral cloud file systems.*
 * **DevOps:** Docker, Docker Compose, Nginx.
