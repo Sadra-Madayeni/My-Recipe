@@ -196,6 +196,11 @@ SIMPLE_JWT = {
 
 CORS_ALLOWED_ORIGINS = os.environ.get('CORS_ALLOWED_ORIGINS', '').split(',')
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://myrecipe-3rie1hnd.b4a.run",
+    "https://my-recipe-orpin.vercel.app"
+]
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
