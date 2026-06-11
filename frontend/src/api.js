@@ -26,7 +26,7 @@ import axios from 'axios'
 
 const api = axios.create({
 
-  baseURL: 'https://myrecipe-3rie1hnd.b4a.run/api/', 
+  baseURL: 'https://myrecipe-374tszln.b4a.run/api/', 
 })
  
 api.interceptors.request.use(
